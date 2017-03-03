@@ -1,5 +1,12 @@
 package assignment6;
 
+/*
+ *  Write a linear-time algorithm bool IsCircularRotation(string s, string t) 
+ *  to determine whether t is obtained by shifting each leter of s by some distance d 
+ *  (wrapping around when necessary). 
+ *  For example arc and car are cyclic rotations of each other.
+ */
+
 public class IsCirulcarRotation {
 
 	/*
@@ -98,6 +105,14 @@ public class IsCirulcarRotation {
 		if (s.length() < t.length()) {
 			return false;
 		}
+		/*
+		 * According my observation , to identify the circular rotation of the pattern can 
+		 * be identified in linear time o(1) by 
+		 * concatenate the same string again.
+		 * so any starting point of the circular rotation we will be able to identify
+		 * for example car has arc and rca
+		 * car  convert to carcar ==> now we can see that c|arc|ar and ca|rca|r can be obtained
+		 */
 		String to_compare = s + s;
 		System.out.println(to_compare);
 		return Calculate_z(to_compare, t);

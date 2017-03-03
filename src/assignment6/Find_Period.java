@@ -1,5 +1,13 @@
 package assignment6;
 
+/*
+ * An integer p is a period of a string s if s=tt...tu
+ * (t repeats p times, and u is a prefix of t). 
+ * The period of s is the largest such integer p. For example, 
+ * if s=ababababababa
+ * then 2,3,62,3,6 are periods of s, and we refer to 6 as the period of s.
+ */
+
 public class Find_Period {
 
 	/*
